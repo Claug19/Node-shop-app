@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "denisa",
+      "name": "Denisa Artean",
+      "status": "admin"
+    },
+    {
+      "id": 2,
+      "username": "claudiu",
+      "name": "Claudiu Ghit",
+      "status": "admin"
+    },
+    {
+      "id": 100,
+      "username": "jo",
+      "name": "John Johnson",
+      "status": "user"
+    },
+    {
+      "id": 101,
+      "username": "Gus",
+      "name": "Gus Fring",
+      "status": "user"
+    }
+  ]
+}
