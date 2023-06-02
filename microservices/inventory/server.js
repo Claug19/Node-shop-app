@@ -1,4 +1,5 @@
 const app = require('koa')();
+var bodyParser = require('koa-bodyparser');
 const router = require('koa-router')();
 const db = require("../../databases/db.json");
 
@@ -29,6 +30,7 @@ router.get('/', function *() {
 
 app.use(router.routes());
 app.use(router.allowedMethods());
+app.use(bodyParser());
 
 app.listen(3000);
 
