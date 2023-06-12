@@ -4,7 +4,7 @@
     {
       "Field": "path-pattern",
       "Values": [
-        "/api/inventory*"
+        "/api"
       ]
     }
   ],

@@ -18,24 +18,24 @@ const reader_con = mysql.createConnection({
 
 writer_con.connect(function (err) {
    if (err) throw err;
-   console.log("Users writer_con successfully connected!");
+   console.log("Products writer_con successfully connected!");
 
    let createTableQuery =
-      `CREATE TABLE IF NOT EXISTS users(
+      `CREATE TABLE IF NOT EXISTS products(
         id int NOT NULL AUTO_INCREMENT, 
-        username varchar(50), 
-        password varchar(50), 
-        name varchar(255), 
-        email varchar(255),
-        token varchar(100),
-        admin_flag bool,
-        PRIMARY KEY(id, username)
+        name varchar(100), 
+        brand varchar(100), 
+        type varchar(100), 
+        image_path varchar(255),
+        description varchar(500),
+        specs varchar(500), 
+        PRIMARY KEY(id)
       );`;
 
    writer_con.query('CREATE DATABASE IF NOT EXISTS main;');
    writer_con.query('USE main;');
    writer_con.query(createTableQuery, function(error, result, fields) {
-      if (error) console.log(err, "\n");
+      if (err) console.log(err, "\n");
       if (result) console.log(result, "\n");
       if (fields) console.log(fields, "\n");
    });
@@ -43,7 +43,7 @@ writer_con.connect(function (err) {
 
 reader_con.connect(function (err) {
    if (err) throw err;
-   console.log("Users reader_con successfully connected!\n");
+   console.log("Products reader_con successfully connected!\n");
 });
 
 exports.writer_con = writer_con;
