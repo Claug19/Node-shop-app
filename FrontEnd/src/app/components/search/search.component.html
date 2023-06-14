@@ -1,0 +1,31 @@
+<div>
+    <h1 class="display-5 fw-bold">What are you gonna listen today?</h1>
+    <pre class="lead">
+You can search for your favorite artists, songs or even podcasts.
+Let's find you some Spotify music to play!
+    </pre>
+<form>
+    <div class="form-group" class="search-div">
+        <input class="form-control-custom" type="search" id="search" name="searchStr" [(ngModel)]="searchStr" (keyup)="searchMusic()"  placeholder="Artists, songs or podcasts" aria-label="Search">
+    </div>
+</form>
+</div>
+
+<div class="search-result" *ngIf="searchRes">
+    <div *ngFor="let res of searchRes">
+        <div class="row">
+            <div class="list-group ">
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list-entry">
+                <div class="d-flex w-100 justify-content-between ">
+                </div>
+                    <h4><a routerLink="/artist/{{res.id}}">{{res.name}}</a></h4> 
+                    <div>
+                        <strong>Genres: </strong>
+                        <span class="badge bg-primary genre-span" *ngFor="let genre of res.genres">{{genre}} </span>    
+                    </div>   
+                </a>
+            </div>    
+        </div>
+    </div>
+</div>
+
