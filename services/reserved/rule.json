@@ -4,11 +4,12 @@
     {
       "Field": "path-pattern",
       "Values": [
-        "/api"
+        "/reserve*",
+        "/delete-reservation*"
       ]
     }
   ],
-  "Priority": 1,
+  "Priority": 2,
   "Actions": [
     {
       "Type": "forward",

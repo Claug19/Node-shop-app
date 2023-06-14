@@ -4,11 +4,11 @@
     {
       "Field": "path-pattern",
       "Values": [
-        "/api"
+        "/products*"
       ]
     }
   ],
-  "Priority": 1,
+  "Priority": 3,
   "Actions": [
     {
       "Type": "forward",

@@ -5,28 +5,28 @@ const user = "admin";
 const password = "adminadmin";
 
 const writer_con = mysql.createConnection({
-   host: writer_host,
-   user: user,
-   password: password
+    host: writer_host,
+    user: user,
+    password: password
 });
 
 const reader_con = mysql.createConnection({
-   host: reader_host,
-   user: user,
-   password: password
+    host: reader_host,
+    user: user,
+    password: password
 })
 
 writer_con.connect(function (err) {
-   if (err) throw err;
-   console.log("Reserved writer_con successfully connected!");
+    if (err) throw err;
+    console.log("Reserved writer_con successfully connected!");
 
-   writer_con.query('CREATE DATABASE IF NOT EXISTS main;');
-   writer_con.query('USE main;');
+    writer_con.query('CREATE DATABASE IF NOT EXISTS main;');
+    writer_con.query('USE main;');
 });
 
 reader_con.connect(function (err) {
-   if (err) throw err;
-   console.log("Reserved reader_con successfully connected!\n");
+    if (err) throw err;
+    console.log("Reserved reader_con successfully connected!\n");
 });
 
 exports.writer_con = writer_con;

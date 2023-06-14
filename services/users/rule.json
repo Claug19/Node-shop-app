@@ -4,7 +4,11 @@
     {
       "Field": "path-pattern",
       "Values": [
-        "/api"
+        "/register*",
+        "/login*",
+        "/logout*",
+        "/users*",
+        "/user*"
       ]
     }
   ],
