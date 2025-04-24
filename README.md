@@ -1,5 +1,5 @@
 <a name="readme-top"></a>
-# ISOC-shop-app
+# NODE.JS SHOP APPLICATION
 
 The current repository represents an example implmentation of a Shop app using a microservice based arhitecture.<br><br>
 
@@ -8,9 +8,7 @@ The project is split between the main parts:
   For this example, the Cloud provider chosen to host the Linux server was AWS EC2.
   Data storage was ensured by using a MySQL Databse instance of Amazon RDS<br><br>
 
-## 2) An Angular based webpage serving as a shop interface. <br>(FRONTEND)
-  Angular being one of the most popular web development frameworks, was the go to choise for implementing a simple shop app.<br><br>
-#
+## 2) An Angular based webpage serving as a shop interface. <br>(FRONTEND)  
 
 ## Built With
 
